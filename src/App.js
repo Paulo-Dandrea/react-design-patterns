@@ -3,6 +3,7 @@ import { PeopleLargeListItem } from "./components/PeopleLargeListItem";
 import { RegularList } from "./layout/components/RegularList";
 import SplitScreen from "./layout/split-screen";
 import { PeopleSmallListItem } from "./components/PeopleSmallListItem";
+import { Modal } from "./layout/components/Modal";
 
 export default function App() {
   return (
@@ -13,11 +14,13 @@ export default function App() {
           resourceName="person"
           itemComponent={PeopleLargeListItem}
         />
-        <RegularList
-          items={people}
-          resourceName="person"
-          itemComponent={PeopleSmallListItem}
-        />
+        <Modal modalButton={"Open people list summary"}>
+          <RegularList
+            items={people}
+            resourceName="person"
+            itemComponent={PeopleSmallListItem}
+          />
+        </Modal>
       </SplitScreen>
     </div>
   );
