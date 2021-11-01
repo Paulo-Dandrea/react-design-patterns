@@ -4,9 +4,6 @@ import { RegularList } from "./layout/components/RegularList";
 import SplitScreen from "./layout/split-screen";
 import { PeopleSmallListItem } from "./components/PeopleSmallListItem";
 
-const LeftHand = () => <h1 style={{ background: "crimson" }}>Esquerda</h1>;
-const RightHand = () => <h1 style={{ background: "orange" }}>Esquerda</h1>;
-
 export default function App() {
   return (
     <div>
