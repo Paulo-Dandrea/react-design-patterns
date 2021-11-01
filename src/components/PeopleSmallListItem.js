@@ -1,4 +1,4 @@
-export const PeopleLargeListItem = ({ person }) => {
+export const PeopleSmallListItem = ({ person }) => {
   const { name, age } = person;
   return (
     <>
