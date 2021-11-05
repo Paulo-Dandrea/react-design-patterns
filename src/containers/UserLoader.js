@@ -4,21 +4,23 @@ import axios from "axios";
 
 const baseURL = "http://localhost:8080";
 
-export const CurrentUserLoader = ({ children }) => {
+export const UserLoader = ({ userId, children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     (async () => {
+      console.log("userLoader");
       try {
-        const currentUser = (
-          await axios.get("/current-user", { baseURL: baseURL })
+        const user = (
+          await axios.get(`/users/${userId}`, { baseURL: baseURL })
         ).data;
-        setUser(currentUser);
+        setUser(user);
+        console.log({user});
       } catch (error) {
         console.log(error);
       }
     })();
-  }, []);
+  }, [userId]);
 
   return (
     <>

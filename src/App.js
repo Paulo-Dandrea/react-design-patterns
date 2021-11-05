@@ -8,20 +8,25 @@ import { Modal } from "./layout/components/Modal";
 import { UserInfo } from "./business-components/UserInfo";
 import { ProductInfo } from "./business-components/ProductInfo";
 import { CurrentUserLoader } from "./containers/CurrentUserLoader";
+import { UserLoader } from "./containers/UserLoader";
 
 export default function App() {
   return (
     <div>
-      <SplitScreen leftWeight="2">
+      <Modal openModalButtonText={"Get User"}>
+        <UserLoader userId="2">
+          <UserInfo />
+        </UserLoader>
+      </Modal>
+      
+      <Modal openModalButtonText={"Current User"}>
         <CurrentUserLoader>
+          Current User Loader:
           <UserInfo />
         </CurrentUserLoader>
-        <RegularList
-          items={people}
-          resourceName="user"
-          itemComponent={UserInfo}
-        />
-      </SplitScreen>
+      </Modal>
+
+      <SplitScreen leftWeight="2">
         <Modal openModalButtonText={"Open product list summary"}>
           <RegularList
             items={products}
@@ -29,6 +34,12 @@ export default function App() {
             itemComponent={ProductInfo}
           />
         </Modal>
+        <RegularList
+          items={people}
+          resourceName="user"
+          itemComponent={UserInfo}
+        />
+      </SplitScreen>
     </div>
   );
 }
