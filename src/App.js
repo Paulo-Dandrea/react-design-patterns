@@ -12,6 +12,8 @@ import { UserLoader } from "./containers/UserLoader";
 import { ResourceLoader } from "./containers/ResouceLoader";
 import { DataSource } from "./containers/DataSource";
 import axios from "axios";
+import { UncontrolledForm } from "./layout/components/UncontrolledForm";
+import { ControlledForm } from "./layout/components/ControlledForm";
 
 const baseURL = "http://localhost:8080";
 
@@ -30,6 +32,9 @@ const Text = ({ text }) => <div>{text}</div>;
 export default function App() {
   return (
     <div>
+      <UncontrolledForm />
+      <ControlledForm />
+
       <Modal openModalButtonText={"Get User"}>
         <UserLoader userId="2">
           <UserInfo />
