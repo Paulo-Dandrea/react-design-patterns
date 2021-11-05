@@ -24,12 +24,12 @@ const ModalContent = styled.div`
   z-index: 2;
 `;
 
-export const Modal = ({ children, modalButton }) => {
+export const Modal = ({ children, openModalButtonText }) => {
   const [shouldShow, setShouldShow] = useState(false);
 
   return (
     <>
-      <button onClick={() => setShouldShow(true)}>{modalButton}</button>
+      <button onClick={() => setShouldShow(true)}>{openModalButtonText}</button>
       {shouldShow && (
         <ModalBackground onClick={() => setShouldShow(false)}>
           <ModalContent onClick={(e) => e.stopPropagation()}>
@@ -44,7 +44,6 @@ export const Modal = ({ children, modalButton }) => {
           </ModalContent>
         </ModalBackground>
       )}
-      ;
     </>
   );
 };

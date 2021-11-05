@@ -1,9 +1,9 @@
-export const PeopleLargeListItem = ({ person }) => {
-  const { name, age, hairColor, hobbies } = person;
+export const UserInfo = ({ user }) => {
+  const { name, age, hairColor, hobbies } = user;
   return (
     <>
       <h3>
-        {name} {age}{" "}
+        {name} {age}
       </h3>
       <p> {hairColor} </p>
       <ul>

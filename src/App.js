@@ -1,9 +1,12 @@
-import { people } from "./data";
-import { PeopleLargeListItem } from "./components/PeopleLargeListItem";
+// Data
+import { people, products } from "./data";
+// Layout
 import { RegularList } from "./layout/components/RegularList";
 import SplitScreen from "./layout/split-screen";
-import { PeopleSmallListItem } from "./components/PeopleSmallListItem";
 import { Modal } from "./layout/components/Modal";
+// Business Components
+import { UserInfo } from "./business-components/UserInfo";
+import { ProductInfo } from "./business-components/ProductInfo";
 
 export default function App() {
   return (
@@ -11,14 +14,14 @@ export default function App() {
       <SplitScreen leftWeight="2">
         <RegularList
           items={people}
-          resourceName="person"
-          itemComponent={PeopleLargeListItem}
+          resourceName="user"
+          itemComponent={UserInfo}
         />
-        <Modal modalButton={"Open people list summary"}>
+        <Modal openModalButtonText={"Open product list summary"}>
           <RegularList
-            items={people}
-            resourceName="person"
-            itemComponent={PeopleSmallListItem}
+            items={products}
+            resourceName="product"
+            itemComponent={ProductInfo}
           />
         </Modal>
       </SplitScreen>
