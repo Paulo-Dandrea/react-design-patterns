@@ -1,30 +1,15 @@
-// Data
-import { people, products } from "./data";
-// Layout
-import { RegularList } from "./layout/components/RegularList";
-import SplitScreen from "./layout/split-screen";
-import { Modal } from "./layout/components/Modal";
-// Business Components
-import { UserInfo } from "./business-components/UserInfo";
-import { ProductInfo } from "./business-components/ProductInfo";
+import { Link } from "react-router-dom";
+
+const baseURL = "http://localhost:8080";
 
 export default function App() {
   return (
     <div>
-      <SplitScreen leftWeight="2">
-        <RegularList
-          items={people}
-          resourceName="user"
-          itemComponent={UserInfo}
-        />
-        <Modal openModalButtonText={"Open product list summary"}>
-          <RegularList
-            items={products}
-            resourceName="product"
-            itemComponent={ProductInfo}
-          />
-        </Modal>
-      </SplitScreen>
+      <Link to="/onboarding-flows">Onboarding Flows</Link>
+      <Link to="/modals">Modals</Link>
+      <Link to="/forms">Forms</Link>
+      <Link to="/loaders">Loaders</Link>
+      <Link to="/split-screen-and-list">Split Screen</Link>
     </div>
   );
 }

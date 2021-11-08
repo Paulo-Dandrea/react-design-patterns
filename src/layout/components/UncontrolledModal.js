@@ -24,7 +24,7 @@ const ModalContent = styled.div`
   z-index: 2;
 `;
 
-export const Modal = ({ children, openModalButtonText }) => {
+export const UncontrolledModal = ({ children, openModalButtonText }) => {
   const [shouldShow, setShouldShow] = useState(false);
 
   return (
