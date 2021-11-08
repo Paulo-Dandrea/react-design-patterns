@@ -1,8 +1,8 @@
 import { ProductInfo } from "../business-components/ProductInfo";
 import { UserInfo } from "../business-components/UserInfo";
 import { products, people } from "../data";
-import { RegularList } from "../layout/components/RegularList";
 import SplitScreen from "../layout/split-screen";
+import { RegularList } from "../layout/components/RegularList";
 
 export const SplitScreenAndList = () => {
   return (
