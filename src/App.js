@@ -13,6 +13,7 @@ export default function App() {
       <Link to="/print-props">PrintProps HOC</Link>
       <Link to="/with-user">With User</Link>
       <Link to="/hooks">Hooks</Link>
+      <Link to="/recursive-component">UsingRecursiveComponent</Link>
     </div>
   );
 }

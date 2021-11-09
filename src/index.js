@@ -11,6 +11,7 @@ import { SplitScreenAndList } from "./pages/SplitScreenAndList";
 import { PrintingProps } from "./pages/PrintingProps";
 import { WithUser } from "./pages/WithUser";
 import { UsingHooks } from "./pages/UsingHooks";
+import { UsingRecursiveComponent } from "./pages/UsingRecursiveComponentAndComposition";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -25,7 +26,10 @@ ReactDOM.render(
       <Route path="/print-props" element={<PrintingProps />} />
       <Route path="/with-user" element={<WithUser />} />
       <Route path="/hooks" element={<UsingHooks />} />
-      
+      <Route
+        path="/recursive-component"
+        element={<UsingRecursiveComponent />}
+      />
     </Routes>
   </BrowserRouter>,
   rootElement
