@@ -28,7 +28,6 @@ export const withEditableUser = (Component, userId) => {
       setUser(originalUser);
     };
 
-    console.log({ user });
 
     return (
       <Component
