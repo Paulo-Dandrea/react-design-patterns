@@ -8,6 +8,8 @@ import { Modals } from "./pages/Modals";
 import { Forms } from "./pages/Forms";
 import { Loaders } from "./pages/Loaders";
 import { SplitScreenAndList } from "./pages/SplitScreenAndList";
+import { PrintingProps } from "./pages/PrintingProps";
+import { WithUser } from "./pages/WithUser";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -19,6 +21,9 @@ ReactDOM.render(
       <Route path="/forms" element={<Forms />} />
       <Route path="/loaders" element={<Loaders />} />
       <Route path="/split-screen-and-list" element={<SplitScreenAndList />} />
+      <Route path="/print-props" element={<PrintingProps />} />
+      <Route path="/with-user" element={<WithUser />} />
+      
     </Routes>
   </BrowserRouter>,
   rootElement

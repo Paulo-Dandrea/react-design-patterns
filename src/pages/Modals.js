@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { UserInfo } from "../business-components/UserInfo";
-import { CurrentUserLoader } from "../containers/CurrentUserLoader";
+import { CurrentUserLoader } from "../container-components/CurrentUserLoader";
 
 import { ControlledModal } from "../layout/components/ControlledModal";
 import { UncontrolledModal } from "../layout/components/UncontrolledModal";

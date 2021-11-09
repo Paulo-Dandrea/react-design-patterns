@@ -1,9 +1,9 @@
 import { ProductInfo } from "../business-components/ProductInfo";
 import { UserInfo } from "../business-components/UserInfo";
-import { CurrentUserLoader } from "../containers/CurrentUserLoader";
-import { DataSource } from "../containers/DataSource";
-import { ResourceLoader } from "../containers/ResouceLoader";
-import { UserLoader } from "../containers/UserLoader";
+import { CurrentUserLoader } from "../container-components/CurrentUserLoader";
+import { DataSource } from "../container-components/DataSource";
+import { ResourceLoader } from "../container-components/ResouceLoader";
+import { UserLoader } from "../container-components/UserLoader";
 
 const getServerData = async (url) => {
   const response = await axios.get(url, { baseURL });

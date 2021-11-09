@@ -10,6 +10,8 @@ export default function App() {
       <Link to="/forms">Forms</Link>
       <Link to="/loaders">Loaders</Link>
       <Link to="/split-screen-and-list">Split Screen</Link>
+      <Link to="/print-props">PrintProps HOC</Link>
+      <Link to="/with-user">With User</Link>
     </div>
   );
 }
