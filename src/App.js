@@ -12,6 +12,7 @@ export default function App() {
       <Link to="/split-screen-and-list">Split Screen</Link>
       <Link to="/print-props">PrintProps HOC</Link>
       <Link to="/with-user">With User</Link>
+      <Link to="/hooks">Hooks</Link>
     </div>
   );
 }

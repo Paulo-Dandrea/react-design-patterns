@@ -9,13 +9,11 @@ export const UserLoader = ({ userId, children }) => {
 
   useEffect(() => {
     (async () => {
-      console.log("userLoader");
       try {
         const user = (
           await axios.get(`/users/${userId}`, { baseURL: baseURL })
         ).data;
         setUser(user);
-        console.log({user});
       } catch (error) {
         console.log(error);
       }

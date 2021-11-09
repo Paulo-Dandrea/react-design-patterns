@@ -10,6 +10,7 @@ import { Loaders } from "./pages/Loaders";
 import { SplitScreenAndList } from "./pages/SplitScreenAndList";
 import { PrintingProps } from "./pages/PrintingProps";
 import { WithUser } from "./pages/WithUser";
+import { UsingHooks } from "./pages/UsingHooks";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route path="/split-screen-and-list" element={<SplitScreenAndList />} />
       <Route path="/print-props" element={<PrintingProps />} />
       <Route path="/with-user" element={<WithUser />} />
+      <Route path="/hooks" element={<UsingHooks />} />
       
     </Routes>
   </BrowserRouter>,
